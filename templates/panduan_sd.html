@@ -1,0 +1,130 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+p, h5, h6, label, li {
+  color: black;
+  text-align: left;
+}
+
+h1, h4 {
+  color: #fff;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.greet {
+  text-align: center;
+  color: #fff;
+}
+
+.keterangan {
+  margin-top: 10%;
+  display: flex;
+  justify-content:space-around;
+}
+
+.logo {
+  width: 50%;
+  position: relative;
+}
+
+.bupati {
+  position: relative;
+  width: 90%;
+}
+
+.wa_icon {
+  text-align: left;
+  width: 80px;
+  margin-left: -25px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .logo {
+    width: 20%;
+    position: relative;
+    margin: 10% 20% 10% 20%;
+
+  }
+}
+
+</style>
+
+<div id="auth">
+  <div class="greet">
+    <h1>Panduan PPDB Musi Rawas Tp. 2022-2023</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-6 mt-5 mx-auto">
+        <div class="card pt-4">
+          <div class="card-header text-center">
+            <h3>Panduan PPDB SD</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <h6>Calon Siswa asal Musi Rawas yang telah memiliki NISN dan/atau lulusan dari TK/Paud di wilayah kabupaten Musi Rawas</h6>
+              <li class="list-group-item">1. <a href="#">Masuk </a>menggunakan NISN/NIK sebagai Username dan tanggal lahir sebagai Password</li>
+              <li class="list-group-item">
+                <p>2. Melengkapi data calon siswa sebagai syarat PPDB melalui link "Data Siswa" pada sidebar</p>
+                <p>Data yang dibutuhkan: </p>
+                <p>- Scan KK</p>
+                <p>- File Foto Close Up terbaru</p>
+              </li>
+            </ul>
+            <br>
+            <ul class="list-group">
+              <h6>Calon Siswa asal Musi Rawas yang TIDAK memiliki NISN dan/atau BUKAN lulusan dari TK/Paud di wilayah kabupaten Musi Rawas</h6>
+              <li class="list-group-item">1. Melakukan registrasi akun pada halaman <a href="{#">Daftar</a></li>
+              <li class="list-group-item">2. Masuk menggunakan NISN/NIK sebagai Username dan tanggal lahir sebagai Password</li>
+              <li class="list-group-item">
+                <p>2. Melengkapi data calon siswa sebagai syarat PPDB melalui link "Data Siswa" pada sidebar</p>
+                <p>Data yang dibutuhkan: </p>
+                <p>- Scan KK</p>
+                <p>- File Foto Close Up terbaru</p>
+              </li>
+            </ul>
+            <br>
+            <ul class="list-group">
+              <h6>Calon Siswa BUKAN BERASAL dari wilayah Musi Rawas yang memiliki NISN</h6>
+              <li class="list-group-item">1. Melakukan registrasi akun pada halaman <a href="{#">Daftar</a></li>
+              <li class="list-group-item">2. Masuk menggunakan NISN/NIK sebagai Username dan tanggal lahir sebagai Password</li>
+              <li class="list-group-item">
+                <p>2. Melengkapi data calon siswa sebagai syarat PPDB melalui link "Data Siswa" pada sidebar</p>
+                <p>Data yang dibutuhkan: </p>
+                <p>- Scan KK</p>
+                <p>- File Foto Close Up terbaru</p>
+              </li>
+            </ul>
+            <br>
+            <ul class="list-group">
+              <h6>Calon Siswa BUKAN BERASAL dari wilayah Musi Rawas yang TIDAK memiliki NISN</h6>
+              <li class="list-group-item">1. Melakukan registrasi akun pada halaman <a href="#">Daftar</a></li>
+              <li class="list-group-item">2. Masuk menggunakan NIK sebagai Username dan tanggal lahir sebagai Password</li>
+              <li class="list-group-item">
+                <p>2. Melengkapi data calon siswa sebagai syarat PPDB melalui link "Data Siswa" pada sidebar</p>
+                <p>Data yang dibutuhkan: </p>
+                <p>- Scan KK</p>
+                <p>- File Foto Close Up terbaru</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+{% endblock %}

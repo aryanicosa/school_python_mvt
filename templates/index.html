@@ -1,0 +1,140 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+h1, h4, h3, h5, h6 {
+  color: #fff;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  color: #fff;
+  font-size:18px;
+}
+
+.greet {
+  text-align: center;
+  color: #fff;
+}
+
+.keterangan {
+  margin-top: 10%;
+  display: flex;
+  justify-content:space-around;
+}
+
+.logo {
+  width: 50%;
+  position: relative;
+}
+
+.bupati {
+  position: relative;
+  width: 90%;
+}
+
+.wa_icon {
+  text-align: left;
+  width: 80px;
+  margin-left: -22px;
+}
+
+.hubungi {
+    padding-top: 120px;
+    padding-left: 100px;
+  }
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .logo {
+    width: 50%;
+    position: relative;
+    margin-left: 30px;
+  }
+
+  .bupati {
+    position: relative;
+    width: 100%;
+    margin-left: -30px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h5, h6 {
+    font-size: 12px;
+  }
+
+  p {
+    font-size:12px;
+  }
+
+  .wa_icon {
+    text-align: left;
+    width: 60px;
+    margin-left: -22px;
+  }
+
+  .keterangan {
+    margin-top: 30px;
+    display: flex;
+    justify-content:space-around;
+
+  }
+
+  .hubungi {
+    padding-top: 30px;
+    width: 200px;
+  }
+}
+
+</style>
+
+<div id="auth">
+  <div class="row greet">
+    <div class="col-3">
+      <img class="logo" src="{% static '/images/logo-mura.png' %}" alt="">
+    </div>
+    <div class="col-6 my-auto">
+      <h4>DINAS PENDIDIKAN DAN KEBUDAYAN KABUPATEN MUSI RAWAS</h4>
+      <h1>Selamat Datang di Website</h1><h1>Penerimaan Peserta Didik Baru</h1>
+      <h4>Tahun Pelajaran 2022-2023</h4>
+    </div>
+    <div class="col-3">
+      <img class="bupati" src="{% static '/images/bupati.png' %}" alt="">
+    </div>
+  </div>
+
+  <div class="row keterangan">
+    <div class="col-4 my-auto">
+      <img class="img-fluid" src="{% static '/images/mantab.png' %}" alt="">
+      <h5>Diselenggarakan oleh:</h5>
+      <h5>Dinas Pendidikan dan Kebudayaan</h5>
+      <h4>Kabupaten MUSI RAWAS</h4>
+    </div>
+    <div class="col-4 hubungi">
+      <h4>Hubungi Kami:</h3>
+      <h6>Dalam upaya menghindari penyebaran COVID-19, Dinas Pendidikan dan Kebudayaan Kabupaten Musi Rawas TIDAK melayani pertanyaan / aduan dalam bentuk tatap muka langsung.</h6>
+      <h6>Pertanyaan / aduan dapat dilayani melalui:</h6>
+      <p>
+        <img src="{% static '/images/wa.png' %}" alt="" class="wa_icon">
+        081234567890
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
