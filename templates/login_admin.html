@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+    @media only screen and (max-width: 768px) {
+  
+    }
+
+</style>
+ 
+  <div id="auth">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 mx-auto">
+                <div class="card pt-4">
+                    <div class="card-body">
+                        <div class="text-center mb-5">
+                            <h3>Masuk ke Akun Admin PPDB</h3>
+                        </div>
+                        <div class="text-center">   
+                            {% if messages %}
+                                {% for message in messages %}
+                                <p{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: red;">{{ message }}</p>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <form method="POST"> 
+                            {% csrf_token %}
+                            <!-- Ganti jadi NPSN untuk username, password dikdas -->
+                            <div class="form-group position-relative">
+                                <label for="username">NPSN</label>
+                                <input type="text" class="form-control" id="username" name="username" value="">
+                                
+                            </div>
+                            <div class="form-group position-relative">
+                                <div class="clearfix">
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="position-relative">
+                                    <input type="password" class="form-control" id="password" name="password">
+                                    
+                                </div>
+                            </div>
+  
+                            <div class="row mt-5">
+                                <div class="col text-center">
+                                    <button class="btn btn-primary">Masuk</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}

@@ -51,3 +51,19 @@ Membuat file `.env` untuk menyimpan confidential data
 install package django-environ
 `pip install django-environ`
 gunakan untuk data confidential misalnya SECRET_KEY
+
+Buat sebuah database menggunakan postgre.
+`sudo -i -u postgres psql`      # masuk ke postgresql
+`create database <nama_db>;`    # membuat database
+`\c`                            # menghubungkan user postresql dengan database yg baru dibuat
+
+Koneksi ke database postgresql
+`pip install psycopg2-binary`   # disini kita masih menggunakan standalone atau pre-compiled binary version yg tidak membutuhkan build/runtime prerequisites
+
+Setup pengaturan koneksi database di file settings.py
+kemudian jalankan `python3 manage.py migrate` 
+
+Buatlah model/table database yg anda ingininkan dalam file `models.py`
+kemudian jalankan perintah `python3 manage.py makemigrations <nama_app>` 
+kemudian jalankan `python3 manage.py migrate` lagi untuk mengeksekusi perintah yg sudah disiapkan dari langkah diatas
+
